@@ -1,0 +1,4 @@
+gym==0.26.2
+numpy==1.23.1
+pyopengl==3.1.5
+pygame==2.1.2  # If you plan to use Pygame for rendering support

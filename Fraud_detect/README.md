@@ -2,7 +2,7 @@
 
 
 
-![env gif](static_visualization1.gif)
+![env gif](rotation.gif)
 
 
 

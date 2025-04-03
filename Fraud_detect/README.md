@@ -2,4 +2,4 @@
 
 
 
-![env gif](gif/rotation.gif)
+![env gif](static_visualization1.gif)

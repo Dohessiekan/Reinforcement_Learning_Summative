@@ -1,40 +1,116 @@
 # Reinforcement_Learning_Summative
 
 
+## Demo
 
-![env gif](rotation.gif)
-
-
-
+![Bank Fraud Detection RL Demo](rotation.gif)
 
 
 
 
-Bank Fraud Detection RL Environment - Overview
-This project provides a reinforcement learning environment for simulating bank fraud detection scenarios, where an agent patrols a grid to intercept fraudsters attempting to breach ATMs. The implementation includes:
 
-A custom Gymnasium environment with grid-based mechanics
 
-Fraudster movement patterns and ATM breach dynamics
 
-Multiple action types (movement, monitoring, interventions)
 
-3D visualization using PyOpenGL
+A reinforcement learning environment for simulating bank fraud detection scenarios, 
+where an agent patrols a grid to intercept fraudsters attempting to breach ATMs.
 
-Training scripts for DQN and Policy Gradient methods
 
-Model saving/loading functionality
+├── environment/
 
-Setup Instructions
-To run this project locally:
+│ ├── custom_env.py # Custom Gymnasium environment implementation
 
-Clone the repository:
-git clone [repository-url]
-cd project_root
-Install dependencies:
+│ ├── rendering.py # Visualization components using PyOpenGL
+
+├── training/
+
+│ ├── dqn_training.py # Training script for DQN using SB3
+|
+│ ├── pg_training.py # Training script for PPO/other PG using SB3
+|
+├── models/
+|
+│ ├── dqn/ # Saved DQN models
+|
+│ └── pg/ # Saved policy gradient models
+|
+├── main.py # Entry point for running experiments
+|
+├── requirements.txt # Project dependencies
+
+## Prerequisites
+
+- Python 3.8 or higher
+- pip package manager
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/bank-fraud-rl.git
+   cd bank-fraud-rl
+
+
+Create and activate a virtual environment
+
+python -m venv venv
+
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+
+# Install the required dependencies
 
 pip install -r requirements.txt
-Run the main script:
+
+# Running the Project
+
+# Training the Agent
+DQN Training:
+
+python training/dqn_training.py
+
+# Policy Gradient (PPO) Training:
+
+python training/pg_training.py
+
+
+# Running Experiments
+
+Use the main entry point to run different experiments:
 
 python main.py
-Key dependencies include Gymnasium, Stable-Baselines3, PyOpenGL, and Pygame. The environment supports both training new models and visualizing pre-trained agents. Configuration options are available in the main script for adjusting grid size, fraudster behavior, and training
+
+
+Configuration
+The environment parameters can be modified in environment/custom_env.py:
+
+Grid size
+
+Number of ATMs
+
+Fraudster spawn rates
+
+Reward structure
+
+Episode length
+
+Dependencies
+Main dependencies:
+
+Python 3.8+
+
+Gymnasium
+
+Stable-Baselines3
+
+PyOpenGL
+
+NumPy
+
+Matplotlib (for visualization)
+
+See requirements.txt for the complete list.
+
+Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements.
+

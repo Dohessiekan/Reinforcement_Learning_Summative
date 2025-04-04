@@ -3,7 +3,7 @@
 
 ## Demo
 
-![Bank Fraud Detection RL Demo](rotation.gif)
+![gif](gif/rotation.gif)
 
 
 
